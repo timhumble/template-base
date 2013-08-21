@@ -78,16 +78,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Brand</a>
-      <div class="nav-collapse collapse" id="spanClasses">
+      <<a data-lift="site.name" class="brand" href="/">muhammadtim.com</a>
+	<div class="nav-collapse collapse" id="spanClasses">
         <ul class="nav">
-		  <li class="active"><a href="#">Home</a></li>
-		  <li><a href="#">Link</a></li>
-          <li class="divider"></li>
+		  <li data-lift="xmenu?locgroup=primary"><a href="#">Primary Menu</a></li>
 		  <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Developers <b class="caret"></b></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ruqyah <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li data-lift="menu.items"><a href="#">Home</a></li>
+			  <li data-lift="xmenu?locgroup=ruqyah"><a href="#">Ruqyah Articles</a></li>
+            </ul>
+          </li>
+		  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+			  <li data-lift="xmenu?locgroup=articles"><a href="#"> Articles</a></li>
+			  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Advice <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+			  <li data-lift="xmenu?locgroup=advice"><a href="#">Advice Articles</a></li>
+            </ul>
+          </li>
             </ul>
           </li>
 		</ul>
