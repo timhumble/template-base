@@ -57,17 +57,37 @@
 
 <body>
 <div data-lift="BootstrapUtil.bodyComment"></div>
-
+<!--
 <div class="topbar">
     <div class="fill">
         <div class="container">
             <a data-lift="site.name" class="brand" href="/">Telegram</a>
             <ul class="nav">
-                <li data-lift="menu.items"><a href="#">Home</a></li>
+                 <li data-lift="menu.items"><a href="#">Home</a></li>
             </ul>
 	    <form data-lift="search" style="float: right"></form>
         </div>
     </div>
+</div> -->
+
+<div class="navbar topbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">Brand</a>
+      <div class="nav-collapse collapse" id="spanClasses">
+        <ul class="nav">
+		  <li class="active"><a href="#">Home</a></li>
+		  <li><a href="#">Link</a></li>
+          <li class="divider"></li>
+		</ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -102,6 +122,10 @@
 
 
 <script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<!--bootstrap js -->
+
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 
 
 <!--daterangepicker-->
