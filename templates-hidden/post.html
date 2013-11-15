@@ -4,11 +4,11 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
-    <title data-lift="menu.title">Post: </title>
+    <title data-lift="menu.title"></title>
 
     <meta data-lift="BootstrapUtil.headComment">
 
-    <script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
 
 
     <!-- Styles -->
@@ -58,32 +58,65 @@
 <body>
 <div data-lift="BootstrapUtil.bodyComment"></div>
 
-<div class="topbar">
-    <div class="fill">
-        <div class="container">
-           <a data-lift="site.name" class="brand" href="/">Telegram</a>
-            <ul class="nav">
-                <li data-lift="menu.items"><a href="#">Home</a></li>
-            </ul>
-   	    <form data-lift="search" style="float: right"></form>
-        </div>
-    </div>
+
+<div class="navbar topbar navbar-fixed-top">
+	<div class="navbar-inner">
+    	<div class="container">
+      		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      		</a>
+      		<a data-lift="site.name" class="brand" href="/">muhammadtim.com</a>
+			<div class="nav-collapse collapse" id="spanClasses">
+        		<ul class="nav">
+		  			<li data-lift="xmenu?locgroup=primary"><a href="#">Primary Menu</a></li>
+		  			<li class="dropdown">
+            			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Ruqyah <b class="caret"></b></a>
+            			<ul class="dropdown-menu">
+			  				<li data-lift="xmenu?locgroup=ruqyah"><a href="#">Ruqyah Articles</a></li>
+            			</ul>
+          			</li>
+		  			<li class="dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<b class="caret"></b></a>
+                    	<ul class="dropdown-menu">
+                        	<li data-lift="xmenu?locgroup=articles"><a href="#"> Articles</a></li>
+                      			<!--
+								<li class="dropdown-submenu">
+                          		<a tabindex="-1" href="#">Advice</a>
+                          		<ul class="dropdown-menu">
+                            		<li data-lift="xmenu?locgroup=advice"><a href="#">Advice Articles</a></li>
+                          		</ul>
+								-->
+                        	</li> 
+                    	</ul>
+                	</li>
+					<!--
+					<li class="dropdown">
+            			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Advice <b class="caret"></b></a>
+            			<ul class="dropdown-menu">
+			  				<li data-lift="xmenu?locgroup=advice"><a href="#">Advice Articles</a></li>
+            			</ul>
+          			</li>
+					-->
+            	</ul>
+      		</div>
+    	</div>
+  	</div>
 </div>
 
+
 <div class="container">
-    <div class="content">
-        <div class="page-header">
-            <h1><span data-lift="page-info?name=title">title</span>
-                <small data-lift="page-info?name=date">2012/01/01</small>
-            </h1>
+    <div class="content" data-lift="move_top?from=left_side&to=page_header">
+        <div class="page-header" id="page_header">
+	  <!-- if you've got a header, put it here -->
         </div>
-        <div id="main_content_place">
-            <div id="left_side">
+        <div id="main_content_place" class="row">
+            <div id="left_side" class="span10">
                 <div id="content">Content goes here</div>
-				<div id="after-content"></div>
             </div>
-	    <div id="right_side">
-	      <!-- blank... but we can layout stuff here -->
+	    <div id="right_side" class="span6">
+	      <span data-lift="twitter?user=muhammadtim">
 	    </div>
         </div>
     </div>
@@ -98,13 +131,16 @@
 
 <div id="telegram_include_me_div" style="display: none">
     <div data-lift="embed?what=/templates-hidden/include"></div>
-    <div data-lift="embed?what=/templates-hidden/post_include"></div>
 </div>
 
 <!--scripts-->
 
 
 <script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<!--bootstrap js -->
+
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 
 
 <!--daterangepicker-->
